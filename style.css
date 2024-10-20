@@ -1,0 +1,1132 @@
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: linear-gradient(to top, rgb(4, 127, 0),rgb(0, 210, 14));
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    min-height: 90px;
+    opacity: 0.9;
+    z-index: 7;
+    box-shadow: 0 7px 12px 0 rgb(2, 91, 0);
+}
+
+.logo{
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    margin: 7px 25px;
+}
+
+.nav {
+    margin: 0 auto;
+}
+
+.a_header{
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all ease 0.3s;
+}
+
+.a_header:hover {
+    color: rgb(108, 255, 92);
+}
+
+.phone-number {
+    margin-right: 25px;
+    font-size: 22px;
+    color: rgb(255, 255, 82);
+}
+
+.audio {
+    margin: 7px 25px;
+    border-radius: 25px;
+}
+
+.mobile-open{
+    display: none;
+    height: 40px;
+    width: 40px;
+    margin: 7px 25px 7px auto;
+}
+
+.mobile-open img{
+    height: 100%;
+    width: 100%;
+}
+
+.mobile-menu {
+    display: none;
+    height: 30px;
+    width: 30px;
+    margin-left: 20px;
+}
+  
+#mobile-container {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    transition: all ease 0.7s;
+}
+  
+#mobile-container:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.mobile-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    cursor: default;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.mobile-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 430px;
+    width: 300px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(to top, rgba(36, 145, 43, 0.93),rgba(25, 144, 80, 0.93));
+    box-shadow: 0 3px 7px 2px rgba(0,255,119,0.3);
+    border-radius: 3000px;
+}
+
+.mobile-close {
+    position: absolute;
+    z-index: 11;
+    top: 7px;
+    right: 0;
+}
+
+.mobile-close img {
+    height: 40px;
+    transition: all ease 0.7s;
+
+}
+
+.mobile-close img:hover {
+    transform: rotate(90deg);
+}
+
+.mobile-nav {
+    margin: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+ 
+}
+
+.mobile-nav a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+#main{
+    display: flex;
+    background: linear-gradient(to top, rgb(255, 255, 255),rgba(0, 128, 0, 0.537));
+}
+
+.main-img1{
+    display: none;
+    border-radius: 70px;
+    box-shadow: 0 7px 25px 0 #5959597e;
+    animation: both fadeIn 3s;
+}
+
+.main-img2{
+    width: 600px;
+    border-radius: 70px;
+    box-shadow: 0 7px 25px 0 #5959597e;
+    animation: both fadeIn 3s;
+}
+
+@keyframes fadeIn {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+#main div{
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 50px 0;
+}
+
+.main-header{
+    font-size: 40px;
+    color: rgb(70, 141, 0); 
+    text-align: center;
+}
+
+.text{
+    font-size: 30px;
+    text-align: center;
+    margin: 25px;
+}
+
+.contact-button{
+    margin-top: 12px;
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    border-radius: 30px;
+    padding: 10px 30px;
+    background: linear-gradient(to right,  #52d66f , #e14d61);
+    box-shadow: 0px 5px 46px 4px rgba(0, 129, 36, 0.3);
+    transition: all ease 0.3s;
+}
+
+.contact-button:hover {
+    transform: scale(1.1);
+}
+
+/* .contact-button:active {
+    color: rgb(108, 255, 92);
+    transition: all ease 0.1s;
+} */
+
+#contact-container {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 20;
+    transition: all ease 0.7s;
+    overflow-y: auto;
+}
+
+#contact-container:target {
+    visibility: visible;
+    opacity: 1;
+}  
+
+.contact-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    cursor: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.contact-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50%);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(to top, rgba(36, 145, 43, 0.93),rgba(25, 144, 80, 0.93));
+    box-shadow: 0 3px 7px 2px rgba(0,255,119,0.3);
+    border-radius: 12px;
+    overflow: hidden;
+    color: white;
+    padding: 30px;
+} 
+
+.contact-window h2 {
+    margin-bottom: 30px;
+}
+
+.contact-close {
+    position: absolute;
+    z-index: 21;
+    top: 7px;
+    right: 0;
+}
+
+.contact-close img {
+    height: 40px;
+    transition: all ease 0.7s;
+}
+
+.contact-close img:hover {
+    transform: rotate(90deg);
+}
+
+.video {
+    width: 500px;
+    height: 300px;
+    margin-bottom: 25px;
+    border-radius: 25px;
+}
+
+#about{
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to top, rgba(0, 128, 0, 0.537),rgba(255, 255, 255, 0.537)), rgba(255, 255, 255, 0.537);
+}
+
+.we-help {
+    color: #e14d61;
+    font-weight: 700;
+}
+
+.img_about{
+    border-radius: 30px;
+    width: 420px;
+    box-shadow: 0 7px 25px 0 #5959597e;
+}
+
+.description{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.description-header{
+    font-size: 40px;
+    color: rgb(5, 142, 0);
+    text-align: center;
+}
+
+.description-text{
+    font-size: 30px;
+    text-align: justify;
+    margin: 25px 70px;
+}
+
+.img-container{
+    width: 100%;
+    min-height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 50px 0;
+}
+
+.img-container a {
+    transition: all ease 0.3s;
+}
+
+.img-container a:hover {
+    transform: scale(1.1);
+}
+
+.img-container img{
+    margin: 20px;
+}
+
+#ecological-restoration{
+    padding: 70px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, rgba(0, 128, 0, 0.537), rgb(255, 255, 255),rgba(0, 128, 0, 0.537));
+}
+
+#factories p{
+    font-size: 30px;
+}
+
+.factories{
+    width: 100%;
+    display: flex;
+    padding-bottom: 50px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.factories-header{
+    font-size: 40px;
+    color: rgb(15, 99, 2);
+    text-align: center;
+}
+
+
+.factories-text{
+    width: 50%;
+    margin: 40px;
+}
+
+.img_factory{
+    width: 600px;
+    border-radius: 8%;
+    margin-bottom: 40px;
+    box-shadow: 0 7px 25px 0 #5959597e;
+}
+
+.cars{
+    width: 100%;
+    display: flex;
+    padding-bottom: 50px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cars-header{
+    font-size: 40px;
+    color: rgb(15, 99, 2);
+    text-align: center;
+}
+
+
+.cars-text{
+    width: 50%;
+    margin: 40px;
+}
+
+.img_cars{
+    width: 600px;
+    border-radius: 8%;
+    margin-bottom: 40px;
+    box-shadow: 0 7px 25px 0 #5959597e;
+}
+
+.ecology{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.img_ecology{
+    width: 600px;
+    border-radius: 8%;
+    margin: 50px;
+    box-shadow: 0 7px 25px 0 #5959597e;
+}
+
+.ecology-header{
+    font-size: 40px;
+    color: rgb(15, 99, 2);
+    text-align: center;
+}
+
+.eclogy-text{
+    width: 50%;
+    margin: 50px;
+}
+
+.volunteering{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.volunteering-text{
+    width: 50%;
+    margin: 40px;
+}   
+
+.img-volunteering{
+    width: 600px;
+    border-radius: 8%;
+    margin: 40px;
+    box-shadow: 0 7px 25px 0 #5959597e;
+}
+
+.reserve{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.img-reserve{
+    width: 600px;
+    border-radius: 8%;
+    margin: 40px;
+    box-shadow: 0 7px 25px 0 #5959597e;
+}
+
+.reserve-text{
+    width: 50%;
+    margin: 40px;
+}
+
+.reclamination{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reclamination-header{
+    font-size: 40px;
+    color: rgb(15, 99, 2);
+    text-align: center;
+}
+
+.img-reclamination{
+    width: 700px;
+    border-radius: 8%;
+    margin: 40px 40px 70px;
+    box-shadow: 0 7px 25px 0 #5959597e;
+}
+
+.fauna{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fauna-header{
+    font-size: 40px;
+    color: rgb(15, 99, 2);
+    text-align: center;
+}
+
+.img-fauna{
+    width: 500px;
+    border-radius: 8%;
+    margin: 40px 40px 70px;
+    box-shadow: 0 7px 25px 0 #5959597e;
+}
+
+.fauna-problems{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.img-fauna-problems{
+    width: 600px;
+    border-radius: 8%;
+    margin: 50px;
+    box-shadow: 0 7px 25px 0 #5959597e;
+}
+
+.fauna-problems-header{
+    font-size: 40px;
+    color: rgb(15, 99, 2);
+    text-align: center;
+}
+
+.fauna-solution{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+.fauna-solution-header{
+    font-size: 40px;
+    color: rgb(15, 99, 2);
+    text-align: center;
+}
+
+.fauna-solution-text{
+    width: 50%;
+    margin: 40px;
+}   
+
+.img-fauna-solution{
+    width: 600px;
+    border-radius: 8%;
+    margin: 40px;
+    box-shadow: 0 7px 25px 0 #5959597e;
+}
+
+.footer{
+    width: 100%;
+    min-height: 70px;
+    background: linear-gradient(to top, rgb(4, 127, 0),rgb(0, 210, 14));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+}
+
+.p_footer{
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    margin: 25px;
+    line-height: 25px;
+}
+
+
+@media screen and (max-width: 500px){
+    #main {
+        flex-direction: column;
+    }
+
+    #main div {
+        height: unset;
+        width: 100%;
+    }
+
+    .main-img1{
+        display: block;
+        width: 300px;
+    }
+
+    .main-img2{
+        display: none;
+    }
+
+    .contact-window h2 {
+        font-size: 18px;
+    }
+
+    .video {
+        width: 100%;
+        height: 210px;
+    }
+
+    .img_about {
+        width: 300px;
+    }
+
+    .img-container img {
+        margin: 20px 0;
+    }
+
+    .main-header {
+        margin-top: 130px;
+    }
+
+    .text {
+        margin-top: 52px;
+        margin-bottom: 0px;
+        font-size: 20px;
+        flex-direction: column;
+    }
+
+    #factories p{
+        font-size: 20px;
+    }
+
+    .description-header {
+        font-size: 30px;
+    }
+
+    .description-text {
+        font-size: 30px;
+        text-align: center;
+        margin: 25px 30px;
+    }
+
+    .img-volunteering{
+        width: 300px;
+    }
+
+    .img_ecology{
+        width: 300px;
+    }
+
+    .img_factory{
+        width: 300px;
+    }
+
+    .img-reserve{
+        width: 300px;
+    }
+
+    .ecology {
+    flex-direction: column-reverse;
+    align-items: center;
+    }
+
+    .volunteering {
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .factories-text{
+        width: 100%;
+    }
+
+    .factories-header{
+        font-size: 30px;
+    }
+
+    .cars-header{
+        font-size: 30px;
+    }
+    
+    
+    .cars-text{
+        width: 100%;
+    }
+    
+    .img_cars{
+        width: 300px;
+    }
+
+    .eclogy-text{
+        width: 100%;
+    }
+
+    .img_ecology {
+        margin:0 50px 50px 50px;
+    }
+
+    .img-volunteering{
+        margin:0 50px 50px 50px;
+    }
+
+    .img-reserve {
+        margin:0 50px 50px 50px;
+    }
+
+    .img-fauna-solution {
+        margin:0 50px 50px 50px; 
+    }
+
+    .ecology-header{
+        font-size: 30px;
+    }
+
+    .volunteering-text{
+        width: 100%;
+    }
+
+    .reserve{
+        width: 100%;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .reserve-text{
+        width:100%;
+    }
+
+    .phone-number{
+        display: none;
+    }
+
+    .contact-window {
+        width: 70%;
+    }
+
+    .nav{
+        display: none;
+    }
+
+    .mobile-open{
+        display: block;
+    }
+
+    .reclamination-header {
+        font-size: 30px;
+    }
+
+    .img-reclamination{
+        width: 300px;
+    }
+
+    .description-text{
+        font-size: 20px;
+    }
+
+    .fauna-header {
+        font-size: 30px;
+    }
+
+    .fauna-problems{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    
+    .fauna-problems-text{
+        width: 100%;
+    }
+
+    .fauna-problems-header{
+        font-size: 30px;
+    }
+
+    .fauna-solution{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fauna-solution-text{
+        width: 100%;
+    }
+
+    .fauna-solution-header {
+        font-size: 30px;
+    }
+
+    .img-fauna{
+        width: 300px;
+    }
+    .img-fauna-problems{
+        width: 300px;
+    }
+    .img-fauna-solution{
+        width: 300px;
+    }
+
+    .footer p{
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 700px ) {
+    .nav{
+        display: none;
+    }
+
+    .mobile-open{
+        display: block;
+    }
+
+    #main {
+    flex-direction: column;
+    }
+
+    #main div {
+    height: unset;
+    width: 100%;
+    }
+
+    .main-header {
+        margin-top: 130px;
+    }
+
+    .text {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 20px;
+        flex-direction: column;
+    }
+
+    .main-img1{
+        display: block;
+        width: 450px;
+    }
+
+    .main-img2{
+        display: none;
+    }
+
+    .contact-window {
+        width: 70%;
+    }
+    
+    .video {
+        width: 90%;
+        height: 250px;
+    }
+
+    .img_about {
+        width: 450px;
+    }
+
+    .factories-text{
+        width: 100%;
+        margin: 0 0 0 0;
+    }
+
+    #factories p{
+        font-size: 20px;
+    }
+
+    .cars-text{
+        width: 100%;
+    }
+    
+    .img_cars{
+        width:450px;
+    }
+
+    .img-volunteering{
+        width: 450px;
+        margin: 0 0 70px 0;
+    }
+
+    .img_ecology{
+        width: 450px;
+        margin: 0 0 70px 0;
+    }
+
+    .img_factory{
+        width: 450px;
+        margin: 0 0 70px 0;
+    }
+    .img-reserve{
+        width: 450px;
+        margin: 0 0 70px 0;
+    }
+
+    .ecology {
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: 0 0 70px 0;
+    }
+
+    .volunteering {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .eclogy-text{
+        width: 100%;
+        margin: 50px 50px 0px 50px;
+    }
+
+    .volunteering-text{
+        width: 100%;
+        margin: 0 0 0 0;
+    }
+
+    .reserve{
+        width: 100%;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .reserve-text{
+        width:100;
+        margin: 0 0 px 0;
+    }
+
+    .img-reclamation{
+        width: 450px;
+    }
+
+    .description-text{
+        font-size: 20px;
+    }
+
+    .img-fauna{
+        width: 450px;
+    }
+    .img-fauna-problems{
+        width: 450px;
+        margin: 0 0 80px 0;
+    }
+    .img-fauna-solution{
+        width: 450px;
+        margin: 0 0 80px 0;
+    }
+
+    .img-reclamination{
+        width: 450px;
+    }
+
+    .fauna-problems{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .fauna-problems-text{
+        width: 100%;
+        margin: 0 0 50px 0;
+    }
+    
+    .fauna-solution{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .fauna-solution-text{
+        width: 100%;
+        margin: 0 0 50px 0;
+    }
+
+    .ecology-header{
+        width: 100%;
+    }
+
+    .footer p{
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1020px) {
+    #main {
+        flex-direction: column;
+    }
+
+    #main div {
+    height: unset;
+    width: 100%;
+    }
+
+    .main-header {
+        margin-top: 130px;
+    }
+
+    .text {
+        margin-top: 52px;
+        margin-bottom: 52px;
+    }
+
+    .main-img1{
+        display: block;
+        width: 500px;
+    }
+
+    .main-img2{
+        display: none;
+    }
+
+    .factories-text {
+        width: 100%;
+    }
+
+    .cars-text{
+        width: 100%;
+    }
+
+    .ecology{
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+    .eclogy-text{
+        width: 100%;
+    }
+
+    .volunteering{
+        flex-direction: column;
+        width: 100%;
+    }
+    .volunteering-text{
+        width: 100%;
+    }
+
+    .reserve{
+        flex-direction: column-reverse;
+
+    }
+    .reserve-text{
+        width: 100%;
+    }
+
+    .img-reclamation{
+        width: 600px;
+    }
+
+    .fauna-problems{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    
+    .fauna-solution{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .fauna-problems-text{
+        width: 100%;
+    }
+    .fauna-solution-text{
+        width: 100%;
+    }
+
+    .img-reclamination{
+        width: 600px;
+    }
+}
+
+@media screen and (min-width: 1020px) and (max-width: 1200px) {
+    #main {
+    flex-direction: column;
+    }
+
+    #main div {
+    height: unset;
+    width: 100%;
+    }
+
+    .main-header {
+        margin-top: 100px;
+    }
+
+    .text {
+        margin-top: 52px;
+        margin-bottom: 52px;
+        flex-direction: column;
+    }
+
+    .img-volunteering{
+        width: 400px;
+        height: 300px;
+    }
+
+    .img_ecology{
+        width: 400px;
+        height: 300px;
+    }
+
+    .img_factory{
+        width: 400px;
+        height: 300px;
+    }
+
+    .img-reserve{
+        width: 400px;
+        height: 300px; 
+    }
+
+    .mobile-open{
+        display: none;
+    }
+
+    .main-img1{
+        display: block;
+        width: 500px;
+    }
+
+    .main-img2{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+    .main-img2{
+        width: 500px;
+    }
+
+    .mobile-open{
+        display: none;
+    }
+}
