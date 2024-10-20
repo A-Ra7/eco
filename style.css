@@ -363,7 +363,7 @@ body{
 }
 
 #ecological-restoration{
-    padding: 70px 30px 30px;
+    padding: 30px 30px 30px;
     display: flex;
     flex-direction: column;
     background: linear-gradient(to bottom, rgba(0, 128, 0, 0.537), rgb(255, 255, 255),rgba(0, 128, 0, 0.537));
