@@ -25,6 +25,7 @@ body{
     opacity: 0.9;
     z-index: 7;
     box-shadow: 0 7px 12px 0 rgb(2, 91, 0);
+    border-radius: 0 0 34px 34px;
 }
 
 .logo{
@@ -316,7 +317,8 @@ body{
 
 .img_about{
     border-radius: 30px;
-    width: 420px;
+    width: 450px;
+    height: 320px;
     box-shadow: 0 7px 25px 0 #5959597e;
 }
 
@@ -624,6 +626,7 @@ body{
 
     .img_about {
         width: 300px;
+        height: 220px ;
     }
 
     .img-container img {
@@ -858,10 +861,6 @@ body{
     .video {
         width: 90%;
         height: 250px;
-    }
-
-    .img_about {
-        width: 450px;
     }
 
     .factories-text{
