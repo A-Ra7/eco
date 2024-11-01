@@ -15,7 +15,7 @@ body{
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    background: linear-gradient(to top, rgb(5, 160, 0),rgb(0, 220, 14));
+    background: linear-gradient(to top, rgb(5, 160, 0),rgb(0, 250, 14));
     position: fixed;
     top: 0;
     right: 0;
@@ -58,7 +58,7 @@ body{
 }
 
 .audio {
-    margin: 7px 25px 7px 0;
+    margin: 7px 25px 7px 25px;
     border-radius: 25px;
 }
 
@@ -66,7 +66,7 @@ body{
     display: none;
     height: 45px;
     width: 45px;
-    margin: 7px 25px 7px auto;
+    margin: 7px 25px 7px 25px;
 }
 
 .mobile-open img{
@@ -604,13 +604,13 @@ body{
 
     .mobile-open{
         display: block;
-        margin: 7px 12px 7px auto;
+        margin: 7px 12px 7px 12px;
     }
 
     .audio{
         width: 160px;
         height: 43px;
-        margin: 7px 12px 7px 0;
+        margin: 7px 0 7px 0;
     }
     
     #main {
@@ -837,6 +837,15 @@ body{
         display: block;
     }
 
+    .mobile-open{
+        display: block;
+        margin: 7px 25px 7px 25px;
+    }
+
+    .audio{
+        margin: 7px 0 7px 0;
+    }
+
     #main {
     flex-direction: column;
     }
@@ -997,6 +1006,10 @@ body{
 }
 
 @media screen and (min-width: 750px) and (max-width: 1020px) {
+    .logo{
+        margin: 7px 5px 7px 25px;
+    }
+
     #main {
         flex-direction: column;
     }
