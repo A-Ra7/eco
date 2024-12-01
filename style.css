@@ -279,7 +279,7 @@ body{
 
 .contact-window h2 {
     margin: 0 12px;
-
+    padding: 0 12px;
 }
 
 .contact-close {
@@ -322,6 +322,10 @@ body{
     border: 2px solid #ffffff7e;
 }
 
+.game-container h1 {
+    font-size: 30px;
+}
+
 .game-container h2 {
     margin: 12px;
 }
@@ -350,7 +354,7 @@ body{
 }
 
 .timer {
-    font-size: 18px;
+    font-size: 20px;
     margin: 12px;
 }
 
@@ -960,6 +964,8 @@ body{
 
     .contact-window {
         width: 75%;
+        top: 30px;
+        transform: translate( -50%, 0);
     }
 
     .contact-window div {

@@ -34,7 +34,7 @@ function endGame() {
         garbage.remove();
         garbage = null;
     }
-    alert(`Время вышло! Вы собрали ${score} из 50 единиц мусора. Попробуйте еще раз :-)`);
+    alert(`Время вышло! Вы собрали ${score} из 50 единиц мусора. Надо собрать весь мусор. Попробуйте еще раз :-)`);
 }
 
 function creategarbage() {
