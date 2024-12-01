@@ -3,18 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Убери мусор!</title>
+    <title>Экология Кузбасса</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="game-container">
-        <h1>Убери мусор!</h1>
-        <div class="score">Очки: <span id="score">0</span></div>
-        <div class="timer">Время: <span id="timer">60</span> сек</div>
-        <div class="game-field" id="gameField"></div>
-        <button class="game-button" onclick="startGame()">Начать игру</button>
+    <header class="header">
+        <img class="logo" src="img/logo.png" alt="">
+        <nav class="nav">
+            <a class="a_header" href="#">Главная</a>
+            <a class="a_header" href="#about">О нас</a>
+            <a class="a_header" href="#ecological-restoration">Экология</a>
+        </nav>
+        <!-- <h2 class="phone-number">+7 123 1234567</h2> -->
+        <audio class="audio" src="uspm-15.mp3" controls autoplay ></audio>
+        <a href="#mobile-container" class="mobile-open">
+            <img src="img/mobile-menu.png" alt="">
+        </a>
+
+        <div id="mobile-container">
+            <a href="#" class="mobile-wrapper"></a>
+            <a href="#" class="mobile-close">
+               <img src="img/krestikton.png" alt="" class="krestik">
+            </a>
+            <div class="mobile-window">
+               <nav class="mobile-nav">
+                   <a href="#">Главная</a>
+                   <hr>
+                   <a href="#about">О Нас</a>
+                   <hr>
+                   <a href="#ecological-restoration">Экология</a>
+               </nav>
+            </div>
+        </div>
+    </header>
+
+    <section id="main">
+        <div>
+            <h2 class="main-header">Экология Кузбасса</h2>
+            <img class="main-img1" src="img/priroda.jpg" alt="">
+            <p class="text">Решение основных проблем экологии - Наша общая инициатива.
+                Если каждый человек будет соблюдать чистоту и порядок, то экология восстановится и города станут намного чище</p>
+            <a class="contact-button" href="#contact-container">Участвовать</a>
+        </div>   
+        <div>
+            <img class="main-img2" src="img/priroda.jpg" alt="">
+        </div>
+    </section>
+
+    
+    <div id="contact-container">
+        <a href="#" class="contact-wrap"></a>
+        <a href="#" class="contact-close">
+           <img src="img/krestikton.png" alt="" class="krestik">
+        </a>
+        <div class="contact-window">
+            <div>
+                <h2>
+                    <span class="contact-container-header">Наша экология - Наша ответственность</span> <br><br><br>
+                    Чтобы помочь восстановить экологию, соберите немного мусора и посадите 1 дерево. <br><br>
+                    Если 100 человек посадят по 1 дерево, это будет уже лес. <br><br>
+                    <a target="_blank" href="https://rutube.ru/video/4c48fb9ea5c3514930e0010e805bee92/">Смотреть видео про экологию Кузбасса</a>
+                </h2>
+    
+                <div class="game-container">
+                    <h2>Игра: Соберите мусор</h2>
+                    <div class="timer">Время:&nbsp<span id="timer">60</span>&nbspсек</div>
+                    <div class="score">Очки:&nbsp<span id="score">0</span></div>
+                    <div class="game-field" id="gameField"></div>
+                    <button class="game-button" onclick="startGame()">Начать игру</button>
+                </div>
+            </div>
+            <a class="contact-button" href="#">Хорошо</a>
+        </div>
     </div>
+
+    <section id="about">
+        <div class="description">
+            <h1 class="description-header">Чем мы занимаемся</h1>
+            <p class="description-text">
+                Заводы, угольные шахты и разрезы загрязняют атмосферный воздух и водные объекты, отравляют и разрушают генетический профиль почвы, становятся источником огромного количества опасных отходов и промышленного мусора. Угольная пыль, копоть и мелкие взвешенные частицы, попадающие в атмосферу, могут стать причиной онкологических и других заболеваний сердца и дыхательных путей.
+                <br><br>
+                <span class="we-help">Мы помогаем экологии Кузбасса и мотивируем других помочь восстановить природу.</span>
+
+            </p>
+        </div>
+        <div class="img-container">
+            <a href="img/1.jpg" target="_blank">
+                <img class="img_about" src="img/1.jpg" alt="">
+            </a>
+            <a href="img/gorod.jpg" target="_blank">
+                <img class="img_about" src="img/gorod.jpg" alt="">
+            </a>
+            <a href="img/2.jpg" target="_blank">
+                <img class="img_about" src="img/2.jpg" alt="">
+            </a>
+        </div>
+    </section>
+
+    <section id="ecological-restoration">
+        <div class="factories">
+            <div class="factories-text">
+                <h1 class="factories-header">Меры по восстановлению экологии</h1>
+                <p class="text">Важным шагом является внедрение современных технологий для очистки выбросов заводов.
+
+                    Также необходимо инвестировать в развитие экологически чистых отраслей.</p>
+            </div>
+            <img class="img_factory" src="img/загрязнение.jpg" alt="">
+        </div>
+
+        <div class="cars">
+            <div class="cars-text">
+                <h1 class="cars-header">Влияние автомобилей</h1>
+                <p class="text">Автомобили поглощают О2 из атмосферы и выделяют углекислый газ. Стирая шины об асфальт атмосфера загрязняется резиновой пылью, вредной для здоровья. Кроме того износ шин приводит к выделению частиц микропластика, 
+                    которые могут попасть в почву и водоёмы, оказывая негативное воздействие на экосистемы и здоровье человека. 
+                    Помимо этого машины загрязняют экологию техническими жидкостями, такими как масло, антифриз и другие химикаты.
+                    <br><br>
+                     Чтобы уменьшить вред, были созданы технологии такие как катализаторы, 
+                    системы контроля выбросов и двигатели на альтернативных топливах. Они помогают существенно снижать уровень загрязнения.
+                    
+                    Законодательные инициативы: Многие страны вводят строгие экологические нормы для автомобилей, 
+                    а также программы утилизации старых автомобилей, чтобы сократить выбросы и улучшить качество воздуха. </p>
+            </div>
+            <img class="img_cars" src="img/car.jpg" alt="">
+        </div>
+
+        <div class="ecology">
+            <img class="img_ecology" src="img/zapovednik.jpg" alt="">
+            <div class="ecology-text">
+                <h1 class="ecology-header">Очистка воды</h1>
+                <p class="text">
+                    Строительство современных очистных сооружений для сточных вод и улучшение качества питьевой воды.</p>
+            </div>
+        </div>
+
+        <div class="volunteering">
+            <div class="volunteering-text">
+                <h1 class="ecology-header">Рекультивация земель</h1>
+                <p class="text">
+                    Восстановление нарушенных земель, включая озеленение и создание рекреационных зон.</p>
+            </div>
+            <img class="img-volunteering" src="img/3.jpg" alt="">
+        </div>
+
+        <div class="reserve">
+            <img class="img-reserve" src="img/reserve.jpg" alt="">
+            <div class="reserve-text">
+                <h1 class="ecology-header">Защита биоразнообразия</h1>
+                <p class="text">
+                    Создание заповедников, национальных парков и других охраняемых территорий для сохранения редких видов растений и животных.
+                    </p>
+            </div>
+        </div>
+
+        <div class="reclamination">
+            <h1 class="reclamination-header">Рекультивация</h1>
+            <div class="reclamination-text">
+                <p class="text">Рекультивация земель - это важнейшая часть природообустройства. Площадь нарушенных земель растёт с каждым годом. Организации, занимающиеся рекультивацией, не успевают восстановить даже десятой части. Компания «ЭкоКем» в 2017 году провёл биологическую рекультивацию 125 гектаров земли. Это почти 200 футбольных полей, но в общем объёме — капля в море.</p>
+            </div>
+            <img class="img-reclamination" src="img/reclamination.jpg" alt="">
+            <div class="reclamination-text">
+                <p class="text"></p>
+            </div>
+        </div>
+
+        <div class="fauna">
+            <h1 class="fauna-header">Защита животного мира</h1>
+            <div class="fauna-text">
+                <p class="text">Фауна Кемеровской области богата и разнообразна. По разнообразию животного мира в пределах всей Западной Сибири Кемеровская область уступает только Алтаю.
+                    Современная фауна позвоночных животных Кемеровской области насчитывает свыше 450 видов, в том числе 73 вида млекопитающих, около 325 видов птиц, 6 – рептилий, 6 – амфибий, более 40 видов рыб и 1 вид круглоротых.
+            </div>
+            <img class="img-fauna" src="img/fauna.jpg" alt="">
+            <div class="fauna-text">
+                <p class="text"></p>
+            </div>
+        </div>
+
+        <div class="fauna-problems">
+            <img class="img-fauna-problems" src="img/razres.jpg" alt="">
+            <div class="fauna-problems-text">
+                <h1 class="fauna-problems-header">Угроза природе</h1>
+                <p class="text">
+                    Негативное воздействие на животный мир и среды их обитания, оказывает увеличение площадей разрезов и шахт, что приводит к сокращению площадей обитания животных.</p>
+            </div>
+        </div>
+    
+        <div class="fauna-solution">
+            <div class="fauna-solution-text">
+                <h1 class="fauna-solution-header">Защита природы</h1>
+                <p class="text">
+                    Для защиты природы были созданы парки и заповедники,
+                    которые обеспечивают защиту животным и растениям. К сожалению их не достаточно, поэтому необходимо создавать новые.</p>
+            </div>
+            <img class="img-fauna-solution" src="img/fauna3.jpg" alt="">
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <P class="p_footer">© 2024 ДТ "Кванториум.Новокузнецк" <br> (Ученики: Михаил Зайцев, Виктор Жестовский, Мирон Гладких, Степан Завершинский, Милана Поздникова, Кирилл Литвиненко, Никита Калинин, Полина Короткова, Иван Борзых, Тимофей Соловьёв, Семён Труханов, Кирилл Абрамов, Милена Саттарова, Данил Рогачев, Илья Чалков, Савелий Данилин, Дмитрий Иванов. Наставник: Артур Андреевич Малышев)</P>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
-

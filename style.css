@@ -1,36 +1,346 @@
-body {
-    margin: 0;
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+}
+
+.header{
     display: flex;
-    justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background: #f0f0f0;
-    font-family: Arial, sans-serif;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: linear-gradient(to top, rgb(5, 160, 0),rgb(0, 171, 9));
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    min-height: 90px;
+    opacity: 0.9;
+    z-index: 7;
+    box-shadow: 0 7px 12px 0 rgb(2, 120, 0);
+    border-radius: 0 0 34px 34px;
+}
+
+.logo{
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    margin: 7px 25px;
+}
+
+.nav {
+    margin: 0 auto;
+}
+
+.a_header{
+    margin-left: 20px;
+    color: rgba(255, 255, 255, 0);
+    text-decoration: none;
+    font-size: 20px;
+    transition: all ease 0.3s;
+}
+
+.a_header:hover {
+    color: rgb(136, 255, 120);
+}
+
+/* .phone-number {
+    margin-right: 25px;
+    font-size: 22px;
+    color: rgb(255, 255, 82);
+} */
+
+.audio {
+    margin: 7px 25px 7px 25px;
+    border-radius: 25px;
+}
+
+.mobile-open{
+    display: none;
+    height: 45px;
+    width: 45px;
+    margin: 7px 25px 7px 25px;
+}
+
+.mobile-open img{
+    height: 100%;
+    width: 100%;
+}
+
+.mobile-menu {
+    display: none;
+    height: 30px;
+    width: 30px;
+    margin-left: 20px;
+}
+  
+#mobile-container {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    transition: all ease 0.7s;
+}
+  
+#mobile-container:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.mobile-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    cursor: default;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.mobile-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 430px;
+    width: 300px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(to top, rgba(36, 145, 43, 0.93),rgba(25, 144, 80, 0.93));
+    box-shadow: 0 3px 7px 2px rgba(0,255,119,0.3);
+    border-radius: 3000px;
+}
+
+.mobile-close {
+    position: absolute;
+    z-index: 11;
+    top: 7px;
+    right: 0;
+}
+
+.mobile-close img {
+    height: 40px;
+    transition: all ease 0.7s;
+
+}
+
+.mobile-close img:hover {
+    transform: rotate(90deg);
+}
+
+.mobile-nav {
+    margin: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+ 
+}
+
+.mobile-nav a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+#main{
+    padding-top: 50px;
+    display: flex;
+    background: linear-gradient(to top, rgb(255, 255, 255, 0.3),rgba(0, 160, 0, 0.3));
+}
+
+.main-img1{
+    display: none;
+    border-radius: 25%;
+    box-shadow: 0 7px 25px 0 #5959597e;
+    animation: both fadeIn 3s;
+}
+
+.main-img2{
+    width: 600px;
+    border-radius: 25%;
+    box-shadow: 0 7px 25px 0 #5959597e;
+    animation: both fadeIn 3s;
+}
+
+@keyframes fadeIn {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+#main div{
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main-header{
+    font-size: 40px;
+    color: rgb(0, 160, 0); 
+    text-align: center;
+}
+
+.text{
+    font-size: 30px;
+    text-align: center;
+    margin: 25px 25px 0 25px;
+}
+
+.contact-button{
+    margin-top: 30px;
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    border-radius: 30px;
+    padding: 10px 30px;
+    background: linear-gradient(to right,  #2fe556 , #fc3e57);
+    box-shadow: 0px 5px 46px 4px rgba(0, 129, 36, 0.3);
+    transition: all ease 0.3s;
+}
+
+.contact-button:hover {
+    transform: scale(1.1);
+}
+
+/* .contact-button:active {
+    color: rgb(108, 255, 92);
+    transition: all ease 0.1s;
+} */
+
+#contact-container {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 20;
+    transition: all ease 0.7s;
+    overflow-y: auto;
+}
+
+#contact-container:target {
+    visibility: visible;
+    opacity: 1;
+}  
+
+.contact-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    cursor: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.contact-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50%);
+    width: 70%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(to top, rgba(5, 160, 0, 0.93),rgba(0, 171, 9, 0.93));
+    box-shadow: 0 7px 12px 0 rgb(2, 120, 0);
+    border-radius: 12px;
+    overflow: hidden;
+    color: white;
+    padding: 30px;
+} 
+
+.contact-window h2 {
+    margin: 0 12px;
+
+}
+
+.contact-close {
+    position: absolute;
+    z-index: 21;
+    top: 7px;
+    right: 0;
+}
+
+.contact-close img {
+    height: 40px;
+    transition: all ease 0.7s;
+}
+
+.contact-close img:hover {
+    transform: rotate(90deg);
+}
+
+.contact-window div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-container-header {
+    font-size: 30px;
+    margin: 12px;
 }
 
 .game-container {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 12px;
+    margin: 0 12px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 25px;
+    background-color: #00911f;
+    border: 2px solid #ffffff7e;
+}
+
+.game-container h2 {
+    margin: 12px;
 }
 
 .game-field {
     width: 300px;
     height: 300px;
-    border: 2px solid #333;
+    border: 2px solid #ffffff7e;
     border-radius: 12px;
     margin: 20px auto;
     position: relative;
-    background-image: url(images/moipark.jpg);
+    background-image: url(img/moipark.jpg);
     background-size: cover;
 }
 
-.neighbor {
+.garbage {
     width: 50px;
     height: 50px;
-    background-image: url(images/musor.png);
+    background-image: url(img/musor.png);
     background-size: cover;
     border-radius: 50%;
     position: absolute;
@@ -39,15 +349,21 @@ body {
     border-image: auto;
 }
 
+.timer {
+    font-size: 18px;
+    margin: 12px;
+}
+
 .score {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 25px;
 }
 
 .game-button {
+    margin-top: 12px;
     padding: 10px 20px;
-    font-size: 16px;
-    background-color: #45a04943 ;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #32e156;
     color: rgb(255, 255, 255);
     border: none;
     border-radius: 25px;
@@ -56,36 +372,883 @@ body {
 }
 
 .game-button:hover {
-    background: #45a049;
+    background: #f44457;
 }
 
-        /* .upgrades-container {
-            display: flex;
-            gap: 10px;
-            margin: 10px 0;
-            justify-content: center;
-        } */
+#about{
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(rgba(255, 255, 255, 0.2) 10%,rgba(0, 160, 0, 0.2) 70% 84%,rgba(255, 255, 255, 0.2) 100%);
+}
 
-        /* .upgrade-item {
-            background: #fff;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
+.we-help {
+    color: #f70f2e;
+    font-weight: 700;
+}
 
-        .upgrade-item:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
+.img_about{
+    border-radius: 30px;
+    width: 450px;
+    height: 320px;
+    box-shadow: 0 7px 25px 0 #5959597e;
+}
 
-        .upgrade-item.disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
+.description{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 
-        .money {
-            color: #F7931A;
-            font-weight: bold;
-        } */
+.description-header{
+    font-size: 40px;
+    color: rgb(5, 160, 0);
+    text-align: center;
+}
+
+.description-text{
+    font-size: 30px;
+    text-align: justify;
+    margin: 25px 70px;
+}
+
+.img-container{
+    width: 100%;
+    min-height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 50px 0;
+}
+
+.img-container a {
+    transition: all ease 0.3s;
+}
+
+.img-container a:hover {
+    transform: scale(1.1);
+}
+
+.img-container img{
+    margin: 20px;
+}
+
+#ecological-restoration{
+    padding: 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(rgb(255, 255, 255, 0.3) 10%,rgba(0, 160, 0, 0.2) 30% 100%);
+}
+
+#factories p{
+    font-size: 30px;
+}
+
+.factories{
+    width: 100%;
+    display: flex;
+    padding-bottom: 50px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.factories-header{
+    font-size: 40px;
+    color: rgb(5, 160, 0);
+    text-align: center;
+}
+
+
+.factories-text{
+    width: 50%;
+    margin: 40px;
+}
+
+.img_factory{
+    width: 600px;
+    border-radius: 8%;
+    margin-bottom: 40px;
+    box-shadow: 0 7px 25px 0 #5959597e;
+}
+
+.cars{
+    width: 100%;
+    display: flex;
+    padding-bottom: 50px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cars-header{
+    font-size: 40px;
+    color: rgb(5, 160, 0);
+    text-align: center;
+}
+
+
+.cars-text{
+    width: 50%;
+    margin: 40px;
+}
+
+.img_cars{
+    width: 600px;
+    border-radius: 8%;
+    margin-bottom: 40px;
+    box-shadow: 0 7px 25px 0 #5959597e;
+}
+
+.ecology{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.img_ecology{
+    width: 600px;
+    border-radius: 8%;
+    margin: 50px;
+    box-shadow: 0 7px 25px 0 #ffffff7e;
+}
+
+.ecology-header{
+    font-size: 40px;
+    color: rgb(5, 160, 0);
+    text-align: center;
+}
+
+.ecology-text{
+    width: 50%;
+    margin: 50px;
+}
+
+.volunteering{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.volunteering-text{
+    width: 50%;
+    margin: 40px;
+}   
+
+.img-volunteering{
+    width: 600px;
+    border-radius: 8%;
+    margin: 40px;
+    box-shadow: 0 7px 25px 0 #5959597e;
+}
+
+.reserve{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.img-reserve{
+    width: 600px;
+    border-radius: 8%;
+    margin: 40px;
+    box-shadow: 0 7px 25px 0 #5959597e;
+}
+
+.reserve-text{
+    width: 50%;
+    margin: 40px;
+}
+
+.reclamination{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reclamination-header{
+    font-size: 40px;
+    color: rgb(5, 160, 0);
+    text-align: center;
+}
+
+.img-reclamination{
+    width: 700px;
+    border-radius: 8%;
+    margin: 40px 40px 70px;
+    box-shadow: 0 7px 25px 0 #5959597e;
+}
+
+.fauna{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fauna-header{
+    font-size: 40px;
+    color: rgb(5, 160, 0);
+    text-align: center;
+}
+
+.img-fauna{
+    width: 500px;
+    border-radius: 8%;
+    margin: 40px 40px 70px;
+    box-shadow: 0 7px 25px 0 #5959597e;
+}
+
+.fauna-problems{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.img-fauna-problems{
+    width: 600px;
+    border-radius: 8%;
+    margin: 50px;
+    box-shadow: 0 7px 25px 0 #5959597e;
+}
+
+.fauna-problems-header{
+    font-size: 40px;
+    color: rgb(5, 160, 0);
+    text-align: center;
+}
+
+.fauna-solution{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+.fauna-solution-header{
+    font-size: 40px;
+    color: rgb(5, 160, 0);
+    text-align: center;
+}
+
+.fauna-solution-text{
+    width: 50%;
+    margin: 40px;
+}   
+
+.img-fauna-solution{
+    width: 600px;
+    border-radius: 8%;
+    margin: 40px;
+    box-shadow: 0 7px 25px 0 #5959597e;
+}
+
+.footer{
+    width: 100%;
+    min-height: 70px;
+    background: linear-gradient(to top, rgb(4, 127, 0),rgb(0, 210, 14));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+}
+
+.p_footer{
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    margin: 25px;
+    line-height: 25px;
+}
+
+
+@media screen and (max-width: 520px){
+
+    .logo{
+        margin: 7px 12px;
+    }
+
+    .nav{
+        display: none;
+    }
+
+    .mobile-open{
+        display: block;
+        margin: 7px 12px 7px 12px;
+    }
+
+    .audio{
+        width: 160px;
+        height: 43px;
+        margin: 7px 0 7px 0;
+    }
+    
+    #main {
+        flex-direction: column;
+    }
+
+    #main div {
+        height: unset;
+        width: 100%;
+    }
+
+    .main-img1 {
+        display: block;
+        width: 340px;
+        height: 250px;
+    }
+
+    .main-img2 {
+        display: none;
+    }
+
+    .contact-window {
+        top: 30px;
+        transform: translate( -50%, 0);
+    }
+
+    .contact-window h2 {
+        font-size: 20px;
+    }
+
+    .contact-window h2 {
+        margin: 25px 12px;
+    }
+
+    .contact-button {
+        margin-top: 52px;
+    }
+
+    .img_about {
+        width: 300px;
+        height: 220px ;
+    }
+
+    .img-container img {
+        margin: 20px 0;
+    }
+
+    .main-header {
+        margin-top: 100px;
+    }
+
+    .text {
+        margin-top: 52px;
+        font-size: 20px;
+        flex-direction: column;
+    }
+
+    #factories p{
+        font-size: 20px;
+    }
+
+    .description-header {
+        font-size: 30px;
+    }
+
+    .description-text {
+        font-size: 30px;
+        text-align: center;
+        margin: 25px 30px;
+    }
+
+    .img-volunteering{
+        width: 300px;
+    }
+
+    .img_ecology{
+        width: 300px;
+    }
+
+    .img_factory{
+        width: 300px;
+    }
+
+    .img-reserve{
+        width: 300px;
+    }
+
+    .ecology {
+    flex-direction: column-reverse;
+    align-items: center;
+    }
+
+    .volunteering {
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .factories-text{
+        width: 100%;
+    }
+
+    .factories-header{
+        font-size: 30px;
+    }
+
+    .cars-header{
+        font-size: 30px;
+    }
+    
+    
+    .cars-text{
+        width: 100%;
+    }
+    
+    .img_cars{
+        width: 300px;
+    }
+
+    .ecology-text{
+        width: 100%;
+    }
+
+    .img_ecology {
+        margin:0 50px 50px 50px;
+    }
+
+    .img-volunteering{
+        margin:0 50px 50px 50px;
+    }
+
+    .img-reserve {
+        margin:0 50px 50px 50px;
+    }
+
+    .img-fauna-solution {
+        margin:0 50px 50px 50px; 
+    }
+
+    .ecology-header{
+        font-size: 30px;
+    }
+
+    .volunteering-text{
+        width: 100%;
+    }
+
+    .reserve{
+        width: 100%;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .reserve-text{
+        width:100%;
+    }
+
+    .phone-number{
+        display: none;
+    }
+
+    .contact-window {
+        width: 75%;
+    }
+
+    .contact-window div {
+        flex-direction: column;
+    }
+
+    .reclamination-header {
+        font-size: 30px;
+    }
+
+    .img-reclamination{
+        width: 300px;
+    }
+
+    .description-text{
+        font-size: 20px;
+    }
+
+    .fauna-header {
+        font-size: 30px;
+    }
+
+    .fauna-problems{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    
+    .fauna-problems-text{
+        width: 100%;
+    }
+
+    .fauna-problems-header{
+        font-size: 30px;
+    }
+
+    .fauna-solution{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fauna-solution-text{
+        width: 100%;
+    }
+
+    .fauna-solution-header {
+        font-size: 30px;
+    }
+
+    .img-fauna{
+        width: 300px;
+    }
+    .img-fauna-problems{
+        width: 300px;
+    }
+    .img-fauna-solution{
+        width: 300px;
+    }
+
+    .footer p{
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 520px) and (max-width: 750px ) {
+    .nav{
+        display: none;
+    }
+
+    .mobile-open{
+        display: block;
+    }
+
+    .mobile-open{
+        display: block;
+        margin: 7px 25px 7px 25px;
+    }
+
+    .audio{
+        margin: 7px 0 7px 0;
+    }
+
+    #main {
+    flex-direction: column;
+    }
+
+    #main div {
+    height: unset;
+    width: 100%;
+    }
+
+    .main-header {
+        margin-top: 120px;
+    }
+
+    .text {
+        margin-top: 52px;
+        font-size: 20px;
+        flex-direction: column;
+    }
+
+    .contact-button {
+        margin-top: 52px;
+    }
+
+    .main-img1{
+        display: block;
+        width: 450px;
+    }
+
+    .main-img2{
+        display: none;
+    }
+
+    .contact-window {
+        width: 75%;
+    }
+
+    .contact-window div {
+        flex-direction: column;
+    }
+
+    .contact-window h2 {
+        margin: 25px 12px;
+    }
+    
+    .video {
+        width: 90%;
+        height: 250px;
+    }
+
+    .factories-text{
+        width: 100%;
+    }
+
+    #factories p{
+        font-size: 20px;
+    }
+
+    .cars-text{
+        width: 100%;
+    }
+    
+    .img_cars{
+        width:450px;
+    }
+
+    .img-volunteering{
+        width: 450px;
+        margin: 0 0 70px 0;
+    }
+
+    .img_ecology{
+        width: 450px;
+        margin: 0 0 70px 0;
+    }
+
+    .img_factory{
+        width: 450px;
+        margin: 0 0 70px 0;
+    }
+    .img-reserve{
+        width: 450px;
+        margin: 0 0 70px 0;
+    }
+
+    .ecology {
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: 0 0 70px 0;
+    }
+
+    .volunteering {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ecology-text{
+        width: 100%;
+    }
+
+    .volunteering-text{
+        width: 100%;
+    }
+
+    .reserve{
+        width: 100%;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .reserve-text{
+        width:100;
+        margin: 0 0 px 0;
+    }
+
+    .img-reclamation{
+        width: 450px;
+    }
+
+    .description-text{
+        font-size: 20px;
+    }
+
+    .img-fauna{
+        width: 450px;
+    }
+    .img-fauna-problems{
+        width: 450px;
+        margin: 0 0 80px 0;
+    }
+    .img-fauna-solution{
+        width: 450px;
+        margin: 0 0 80px 0;
+    }
+
+    .img-reclamination{
+        width: 450px;
+    }
+
+    .fauna-problems{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .fauna-problems-text{
+        width: 100%;
+        margin: 0 0 50px 0;
+    }
+    
+    .fauna-solution{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .fauna-solution-text{
+        width: 100%;
+        margin: 0 0 50px 0;
+    }
+
+    .ecology-header{
+        width: 100%;
+    }
+
+    .footer p{
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 750px) and (max-width: 1020px) {
+    .logo{
+        margin: 7px 5px 7px 25px;
+    }
+
+    #main {
+        flex-direction: column;
+    }
+
+    #main div {
+    height: unset;
+    width: 100%;
+    }
+
+    .main-header {
+        margin-top: 120px;
+    }
+
+    .text {
+        margin-top: 52px;
+    }
+
+    .main-img1{
+        display: block;
+        width: 500px;
+    }
+
+    .main-img2{
+        display: none;
+    }
+
+    .contact-button {
+        margin-top: 52px;
+    }
+
+    .contact-window {
+        width: 90%;
+    } 
+
+    .factories-text {
+        width: 100%;
+    }
+
+    .cars-text{
+        width: 100%;
+    }
+
+    .ecology{
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+    .ecology-text{
+        width: 100%;
+    }
+
+    .volunteering{
+        flex-direction: column;
+        width: 100%;
+    }
+    .volunteering-text{
+        width: 100%;
+    }
+
+    .reserve{
+        flex-direction: column-reverse;
+
+    }
+    .reserve-text{
+        width: 100%;
+    }
+
+    .img-reclamation{
+        width: 600px;
+    }
+
+    .fauna-problems{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    
+    .fauna-solution{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .fauna-problems-text{
+        width: 100%;
+    }
+    .fauna-solution-text{
+        width: 100%;
+    }
+
+    .img-reclamination{
+        width: 600px;
+    }
+}
+
+@media screen and (min-width: 1020px) and (max-width: 1200px) {
+    #main {
+    flex-direction: column;
+    }
+
+    #main div {
+    height: unset;
+    width: 100%;
+    }
+
+    .main-header {
+        margin-top: 120px;
+    }
+
+    .text {
+        margin-top: 52px;
+        flex-direction: column;
+    }
+
+    .img-volunteering{
+        width: 400px;
+        height: 300px;
+    }
+
+    .img_ecology{
+        width: 400px;
+        height: 300px;
+    }
+
+    .img_factory{
+        width: 400px;
+        height: 300px;
+    }
+
+    .img-reserve{
+        width: 400px;
+        height: 300px; 
+    }
+
+    .mobile-open{
+        display: none;
+    }
+
+    .main-img1{
+        display: block;
+        width: 500px;
+    }
+
+    .main-img2{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+    .main-img2{
+        width: 500px;
+    }
+
+    .mobile-open{
+        display: none;
+    }
+}
