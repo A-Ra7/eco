@@ -1,6 +1,9 @@
+* { 
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
-    box-sizing: border-box;
 }
 
 body{
@@ -31,7 +34,7 @@ body{
 .logo{
     width: 70px;
     height: 70px;
-    border-radius: 50px;
+    border-radius: 50%;
     margin: 7px 25px;
 }
 
@@ -39,15 +42,16 @@ body{
     margin: 0 auto;
 }
 
-.a_header{
+.nav a {
     margin-left: 20px;
     color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: 20px;
     transition: all ease 0.3s;
+    font-weight: 500;
 }
 
-.a_header:hover {
+.nav a:hover {
     color: rgb(136, 255, 120);
 }
 
@@ -129,13 +133,12 @@ body{
     position: absolute;
     z-index: 11;
     top: 7px;
-    right: 0;
+    right: 7px;
 }
 
 .mobile-close img {
     height: 40px;
     transition: all ease 0.7s;
-
 }
 
 .mobile-close img:hover {
@@ -154,24 +157,27 @@ body{
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-size: 20px;
+    font-weight: 500;
 }
 
 #main{
-    padding-top: 50px;
+    height: 100vh;
+    width: 100%;
+    padding-top: 90px;
     display: flex;
     background: linear-gradient(to top, rgb(255, 255, 255, 0.3),rgba(0, 160, 0, 0.3));
 }
 
-.main-img1{
+.main-img1 {
     display: none;
-    border-radius: 25%;
+    border-radius: 160px;
     box-shadow: 0 7px 25px 0 #5959597e;
     animation: both fadeIn 3s;
 }
 
-.main-img2{
-    width: 600px;
-    border-radius: 25%;
+.main-img2 {
+    width: 610px;
+    border-radius: 160px;
     box-shadow: 0 7px 25px 0 #5959597e;
     animation: both fadeIn 3s;
 }
@@ -189,7 +195,7 @@ body{
 }
 
 #main div{
-    height: 100vh;
+    height: 100%;
     width: 50%;
     display: flex;
     align-items: center;
@@ -201,11 +207,20 @@ body{
     font-size: 40px;
     color: rgb(0, 160, 0); 
     text-align: center;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.main-text{
+    font-size: 30px;
+    text-align: center;
+    margin: 25px;
+    font-weight: 500;
 }
 
 .text{
-    font-size: 30px;
-    text-align: center;
+    font-size: 25px;
+    text-align: justify;
     margin: 25px 25px 0 25px;
 }
 
@@ -217,18 +232,17 @@ body{
     border-radius: 30px;
     padding: 10px 30px;
     background: linear-gradient(to right,  #2fe556 , #fc3e57);
-    box-shadow: 0px 5px 46px 4px rgba(0, 129, 36, 0.3);
+    box-shadow: 0px 5px 25px 4px rgba(0, 138, 39, 0.3);
     transition: all ease 0.3s;
 }
 
 .contact-button:hover {
+    box-shadow: 0px 5px 25px 4px rgba(0, 255, 72, 0.3);
     transform: scale(1.1);
 }
 
-/* .contact-button:active {
-    color: rgb(108, 255, 92);
-    transition: all ease 0.1s;
-} */
+.contact-button:active {
+}
 
 #contact-container {
     visibility: hidden;
@@ -248,14 +262,14 @@ body{
     opacity: 1;
 }  
 
-.contact-wrap {
+.contact-wrapper {
     position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
     width: 100%;
-    cursor: auto;
-    background-color: rgba(0, 0, 0, 0.7);
+    cursor: default;
+    background-color: rgba(247, 244, 244, 0.9);
 }
 
 .contact-window {
@@ -269,10 +283,9 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: linear-gradient(to top, rgba(5, 160, 0, 0.93),rgba(0, 171, 9, 0.93));
+    background: linear-gradient(to top, rgba(5, 160, 0, 0.9),rgba(0, 171, 9, 0.9));
     box-shadow: 0 7px 12px 0 rgb(2, 120, 0);
     border-radius: 12px;
-    overflow: hidden;
     color: white;
     padding: 30px;
 } 
@@ -286,7 +299,7 @@ body{
     position: absolute;
     z-index: 21;
     top: 7px;
-    right: 0;
+    right: 7px;
 }
 
 .contact-close img {
@@ -323,7 +336,7 @@ body{
 }
 
 .game-container h1 {
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .game-container h2 {
@@ -368,6 +381,7 @@ body{
     font-size: 18px;
     font-weight: 500;
     background-color: #32e156;
+    box-shadow: 0px 5px 25px 4px rgba(0, 138, 39, 0.3);
     color: rgb(255, 255, 255);
     border: none;
     border-radius: 25px;
@@ -377,10 +391,11 @@ body{
 
 .game-button:hover {
     background: #f44457;
+    box-shadow: 0px 5px 25px 4px #f444565d;
 }
 
 #about{
-    padding-top: 70px;
+    padding-top: 90px;
     display: flex;
     flex-direction: column;
     background: linear-gradient(rgba(255, 255, 255, 0.2) 10%,rgba(0, 160, 0, 0.2) 70% 84%,rgba(255, 255, 255, 0.2) 100%);
@@ -389,13 +404,6 @@ body{
 .we-help {
     color: #f70f2e;
     font-weight: 700;
-}
-
-.img_about{
-    border-radius: 30px;
-    width: 450px;
-    height: 320px;
-    box-shadow: 0 7px 25px 0 #5959597e;
 }
 
 .description{
@@ -413,19 +421,15 @@ body{
 }
 
 .description-text{
-    font-size: 30px;
-    text-align: justify;
-    margin: 25px 70px;
+    margin: 0 70px 25px 70px;
 }
 
 .img-container{
-    width: 100%;
-    min-height: 30vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 50px 0;
+    margin: 50px 30px;
 }
 
 .img-container a {
@@ -438,10 +442,14 @@ body{
 
 .img-container img{
     margin: 20px;
+    border-radius: 30px;
+    width: 430px;
+    height: 300px;
+    box-shadow: 0 7px 25px 0 #5959597e;
 }
 
 #ecological-restoration{
-    padding: 30px 30px 30px;
+    padding: 70px 30px 30px;
     display: flex;
     flex-direction: column;
     background: linear-gradient(rgb(255, 255, 255, 0.3) 10%,rgba(0, 160, 0, 0.2) 30% 100%);
@@ -467,14 +475,13 @@ body{
 
 
 .factories-text{
-    width: 50%;
     margin: 40px;
 }
 
-.img_factory{
+.factories img{
     width: 600px;
-    border-radius: 8%;
-    margin-bottom: 40px;
+    border-radius:30px;
+    margin-top: 40px;
     box-shadow: 0 7px 25px 0 #5959597e;
 }
 
@@ -494,14 +501,13 @@ body{
 
 
 .cars-text{
-    width: 50%;
     margin: 40px;
 }
 
-.img_cars{
+.cars img{
     width: 600px;
-    border-radius: 8%;
-    margin-bottom: 40px;
+    border-radius:30px;
+    margin-top: 40px;
     box-shadow: 0 7px 25px 0 #5959597e;
 }
 
@@ -511,9 +517,9 @@ body{
     align-items: center;
 }
 
-.img_ecology{
+.ecology img{
     width: 600px;
-    border-radius: 8%;
+    border-radius:30px;
     margin: 50px;
     box-shadow: 0 7px 25px 0 #ffffff7e;
 }
@@ -540,9 +546,9 @@ body{
     margin: 40px;
 }   
 
-.img-volunteering{
+.volunteering img{
     width: 600px;
-    border-radius: 8%;
+    border-radius:30px;
     margin: 40px;
     box-shadow: 0 7px 25px 0 #5959597e;
 }
@@ -553,9 +559,9 @@ body{
     align-items: center;
 }
 
-.img-reserve{
+.reserve img{
     width: 600px;
-    border-radius: 8%;
+    border-radius:30px;
     margin: 40px;
     box-shadow: 0 7px 25px 0 #5959597e;
 }
@@ -578,11 +584,15 @@ body{
     text-align: center;
 }
 
-.img-reclamination{
+.reclamination img {
     width: 700px;
-    border-radius: 8%;
-    margin: 40px 40px 70px;
+    border-radius:30px;
+    margin-top: 40px;
     box-shadow: 0 7px 25px 0 #5959597e;
+}
+
+.reclamination-text {
+    margin: 40px;
 }
 
 .fauna{
@@ -598,23 +608,33 @@ body{
     text-align: center;
 }
 
-.img-fauna{
+.fauna img{
     width: 500px;
-    border-radius: 8%;
-    margin: 40px 40px 70px;
+    border-radius:30px;
+    margin-top: 40px;
     box-shadow: 0 7px 25px 0 #5959597e;
 }
 
+.fauna-text {
+    margin: 40px;
+}
+
 .fauna-problems{
+    margin-top: 30px;
     width: 100%;
     display: flex;
     align-items: center;
 }
 
-.img-fauna-problems{
+.fauna-problems-text{
+    width: 50%;
+    margin: 40px;
+}   
+
+.fauna-problems img{
     width: 600px;
-    border-radius: 8%;
-    margin: 50px;
+    border-radius:30px;
+    margin: 0 50px 50px 50px;
     box-shadow: 0 7px 25px 0 #5959597e;
 }
 
@@ -628,7 +648,7 @@ body{
     width: 100%;
     display: flex;
     align-items: center;
-    margin-bottom: 70px;
+    margin-top: 30px;
 }
 
 .fauna-solution-header{
@@ -642,31 +662,111 @@ body{
     margin: 40px;
 }   
 
-.img-fauna-solution{
+.fauna-solution img{
     width: 600px;
-    border-radius: 8%;
+    border-radius:30px;
     margin: 40px;
     box-shadow: 0 7px 25px 0 #5959597e;
 }
 
-.footer{
+#footer {
     width: 100%;
-    min-height: 70px;
-    background: linear-gradient(to top, rgb(4, 127, 0),rgb(0, 210, 14));
+    border-radius: 0 0 12px 12px;
+}
+
+.footer-wrapper {
+    height: 100px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    border-radius: 0 0 12px 12px;
+    background: linear-gradient(to top, rgb(4, 127, 0),rgb(0, 210, 14));
+    box-shadow: rgba(0, 0, 0, 0.25) 0 0 7px;
     opacity: 0.9;
 }
 
-.p_footer{
-    text-align: center;
-    color: white;
+.copyright {
+    transition: all ease-out 0.2s;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
     font-size: 18px;
-    margin: 25px;
-    line-height: 25px;
+    margin: 12px;
+    text-align: center;
 }
 
+.copyright:hover {
+    color: rgb(136, 255, 120);
+}
+
+#creators-container {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    transition: all ease 0.7s;
+}
+
+#creators-container:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.creators-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    cursor:default;
+    background-color: rgba(234, 234, 234, 0.9);
+}
+
+.creators-window {
+    padding: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 90%;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(to top, rgba(5, 160, 0, 0.7),rgba(0, 188, 9, 0.7));
+    box-shadow: rgba(0, 0, 0, 0.25) 0 3px 7px;
+    border-radius: 25px;
+}
+
+.creators {
+    width: 100%;
+    font-size: 18px;
+    overflow: auto;
+    scrollbar-color:rgba(255, 255, 255, 0.7) rgba(255, 255, 255, 0);
+    padding: 12px 25px 12px 12px;
+    margin-top: 0;
+}
+
+.creators-close {
+    position: absolute;
+    z-index: 21;
+    top: 7px;
+    right: 7px;
+}
+
+.creators-close img {
+    height: 40px;
+    transition: all ease 0.7s;
+}
+
+.creators-close img:hover {
+    transform: rotate(90deg);
+}
 
 @media screen and (max-width: 520px){
 
@@ -691,17 +791,28 @@ body{
     
     #main {
         flex-direction: column;
+        height: auto;
     }
 
     #main div {
-        height: unset;
         width: 100%;
+    }
+    
+    .main-header {
+        margin-top: 70px;
+    }
+
+    .main-text {
+        margin-top: 40px;
+        margin-bottom: 0;
+        font-size: 22px;
     }
 
     .main-img1 {
         display: block;
         width: 340px;
         height: 250px;
+        border-radius: 90px;
     }
 
     .main-img2 {
@@ -711,164 +822,148 @@ body{
     .contact-window {
         top: 30px;
         transform: translate( -50%, 0);
-    }
-
-    .contact-window h2 {
-        font-size: 20px;
-    }
-
-    .contact-window h2 {
-        margin: 25px 12px;
-    }
-
-    .contact-button {
-        margin-top: 52px;
-    }
-
-    .img_about {
-        width: 300px;
-        height: 220px ;
-    }
-
-    .img-container img {
-        margin: 20px 0;
-    }
-
-    .main-header {
-        margin-top: 100px;
-    }
-
-    .text {
-        margin-top: 52px;
-        font-size: 20px;
-        flex-direction: column;
-    }
-
-    #factories p{
-        font-size: 20px;
-    }
-
-    .description-header {
-        font-size: 30px;
-    }
-
-    .description-text {
-        font-size: 30px;
-        text-align: center;
-        margin: 25px 30px;
-    }
-
-    .img-volunteering{
-        width: 300px;
-    }
-
-    .img_ecology{
-        width: 300px;
-    }
-
-    .img_factory{
-        width: 300px;
-    }
-
-    .img-reserve{
-        width: 300px;
-    }
-
-    .ecology {
-    flex-direction: column-reverse;
-    align-items: center;
-    }
-
-    .volunteering {
-    flex-direction: column;
-    align-items: center;
-    }
-
-    .factories-text{
-        width: 100%;
-    }
-
-    .factories-header{
-        font-size: 30px;
-    }
-
-    .cars-header{
-        font-size: 30px;
-    }
-    
-    
-    .cars-text{
-        width: 100%;
-    }
-    
-    .img_cars{
-        width: 300px;
-    }
-
-    .ecology-text{
-        width: 100%;
-    }
-
-    .img_ecology {
-        margin:0 50px 50px 50px;
-    }
-
-    .img-volunteering{
-        margin:0 50px 50px 50px;
-    }
-
-    .img-reserve {
-        margin:0 50px 50px 50px;
-    }
-
-    .img-fauna-solution {
-        margin:0 50px 50px 50px; 
-    }
-
-    .ecology-header{
-        font-size: 30px;
-    }
-
-    .volunteering-text{
-        width: 100%;
-    }
-
-    .reserve{
-        width: 100%;
-        flex-direction: column-reverse;
-        align-items: center;
-    }
-
-    .reserve-text{
-        width:100%;
-    }
-
-    .phone-number{
-        display: none;
-    }
-
-    .contact-window {
-        width: 75%;
+        width: 90%;
     }
 
     .contact-window div {
         flex-direction: column;
     }
 
+    .contact-window h2 {
+        margin: 25px 12px;
+        font-size: 20px;
+    }
+
+    .contact-button {
+    }
+
+    .img-container img {
+        margin: 20px 0;
+        width: 300px;
+        height: 220px;
+    }
+
+    .text {
+        margin-top: 30px;
+        font-size: 20px;
+    }
+
+    .description-header {
+        font-size: 30px;
+        margin-bottom: 0;
+    }
+
+    .description-text {
+       margin-left: 25px;
+       margin-right: 25px;
+    }
+
+    .ecology {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .volunteering {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .factories {
+        padding-bottom: 25px
+    }
+
+    
+    .factories-header{
+        font-size: 30px;
+    }
+
+    .factories img{
+        width: 300px;
+    }
+
+    .factories-text{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .cars {
+        padding-bottom: 25px;
+    }
+
+    .cars-header{
+        font-size: 30px;
+    }
+    
+    .cars-text{
+        width: 100%;
+    }
+    
+    .cars img{
+        width: 300px;
+    }
+
+    .ecology-header {
+        font-size: 30px;
+    }
+
+    .ecology-text{
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .ecology img{
+        margin:0 50px 50px 50px;
+        width: 300px;
+    }
+
+    .volunteering-text {
+        width: 100%;
+    }
+
+    .volunteering img {
+        margin:0 50px 50px 50px;
+        width: 300px;
+    }
+
+    .reserve {
+        width: 100%;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .reserve-text {
+        width: 100%;
+    }
+
+    .reserve img{
+        margin:0 50px 50px 50px;
+        width: 300px;
+    }
+
     .reclamination-header {
         font-size: 30px;
     }
 
-    .img-reclamination{
-        width: 300px;
+    .reclamination-text {
+        margin-left: 0;
+        margin-right: 0;
     }
 
-    .description-text{
-        font-size: 20px;
+    .reclamination img {
+        width: 300px;
     }
 
     .fauna-header {
         font-size: 30px;
+    }
+
+    .fauna img{
+        width: 300px;
+    }
+
+    .fauna-text{
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .fauna-problems{
@@ -884,9 +979,18 @@ body{
         font-size: 30px;
     }
 
+    .fauna-problems img{
+        width: 300px;
+    }
+
     .fauna-solution{
         flex-direction: column;
         align-items: center;
+    }
+
+    .fauna-solution img{
+        margin: 0 50px 50px 50px; 
+        width: 300px;
     }
 
     .fauna-solution-text{
@@ -897,18 +1001,8 @@ body{
         font-size: 30px;
     }
 
-    .img-fauna{
-        width: 300px;
-    }
-    .img-fauna-problems{
-        width: 300px;
-    }
-    .img-fauna-solution{
-        width: 300px;
-    }
-
-    .footer p{
-        font-size: 16px;
+    .creators-window {
+        width: 90%;
     }
 }
 
@@ -921,26 +1015,27 @@ body{
         display: block;
     }
 
-    .mobile-open{
-        display: block;
-        margin: 7px 25px 7px 25px;
-    }
-
     .audio{
         margin: 7px 0 7px 0;
     }
 
     #main {
     flex-direction: column;
+    height: auto;
     }
 
     #main div {
-    height: unset;
     width: 100%;
     }
 
     .main-header {
         margin-top: 120px;
+    }
+
+    .main-text {
+        margin-top: 40px;
+        margin-bottom: 0;
+        font-size: 22px;
     }
 
     .text {
@@ -950,12 +1045,12 @@ body{
     }
 
     .contact-button {
-        margin-top: 52px;
     }
 
     .main-img1{
         display: block;
         width: 450px;
+        border-radius: 120px;
     }
 
     .main-img2{
@@ -981,45 +1076,47 @@ body{
         height: 250px;
     }
 
-    .factories-text{
-        width: 100%;
+    .description-text {
+        margin-left: 25px;
+        margin-right: 25px;
     }
 
-    #factories p{
-        font-size: 20px;
+    .factories-text{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .cars {
+        padding-bottom: 25px;
     }
 
     .cars-text{
-        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
     }
     
-    .img_cars{
+    .cars img {
         width:450px;
     }
 
-    .img-volunteering{
+    .volunteering img {
         width: 450px;
-        margin: 0 0 70px 0;
     }
 
-    .img_ecology{
+    .ecology img{
         width: 450px;
-        margin: 0 0 70px 0;
     }
 
-    .img_factory{
+    .factories img{
         width: 450px;
-        margin: 0 0 70px 0;
     }
-    .img-reserve{
+    .reserve img{
         width: 450px;
-        margin: 0 0 70px 0;
     }
 
     .ecology {
         flex-direction: column-reverse;
         align-items: center;
-        margin: 0 0 70px 0;
     }
 
     .volunteering {
@@ -1028,7 +1125,7 @@ body{
     }
 
     .ecology-text{
-        width: 100%;
+       width: 100%;
     }
 
     .volunteering-text{
@@ -1042,32 +1139,33 @@ body{
     }
 
     .reserve-text{
-        width:100;
-        margin: 0 0 px 0;
+        width:100%;
     }
 
-    .img-reclamation{
+    .reclamination img{
         width: 450px;
     }
 
-    .description-text{
-        font-size: 20px;
-    }
-
-    .img-fauna{
+    .fauna img{
         width: 450px;
     }
-    .img-fauna-problems{
+    .fauna-problems img{
         width: 450px;
         margin: 0 0 80px 0;
     }
-    .img-fauna-solution{
+    .fauna-solution img{
         width: 450px;
         margin: 0 0 80px 0;
     }
 
-    .img-reclamination{
-        width: 450px;
+    .reclamination-text {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .fauna-text {
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .fauna-problems{
@@ -1077,7 +1175,6 @@ body{
 
     .fauna-problems-text{
         width: 100%;
-        margin: 0 0 50px 0;
     }
     
     .fauna-solution{
@@ -1087,15 +1184,14 @@ body{
     
     .fauna-solution-text{
         width: 100%;
-        margin: 0 0 50px 0;
     }
 
     .ecology-header{
         width: 100%;
     }
 
-    .footer p{
-        font-size: 16px;
+    .creators-window {
+        width: 90%;
     }
 }
 
@@ -1106,15 +1202,19 @@ body{
 
     #main {
         flex-direction: column;
+        height: auto;
     }
 
     #main div {
-    height: unset;
     width: 100%;
     }
 
     .main-header {
         margin-top: 120px;
+    }
+
+    .main-text {
+        margin-top: 52px;
     }
 
     .text {
@@ -1124,6 +1224,7 @@ body{
     .main-img1{
         display: block;
         width: 500px;
+        border-radius: 120px;
     }
 
     .main-img2{
@@ -1191,23 +1292,28 @@ body{
         width: 100%;
     }
 
-    .img-reclamination{
-        width: 600px;
+    .creators-window {
+        width: 70%;
     }
 }
 
 @media screen and (min-width: 1020px) and (max-width: 1200px) {
     #main {
-    flex-direction: column;
+        flex-direction: column;
+        height: auto;
     }
 
     #main div {
-    height: unset;
-    width: 100%;
+        height: unset;
+        width: 100%;
     }
 
     .main-header {
         margin-top: 120px;
+    }
+
+    .main-text {
+        margin-top: 52px;
     }
 
     .text {
@@ -1215,22 +1321,22 @@ body{
         flex-direction: column;
     }
 
-    .img-volunteering{
+    .volunteering img{
         width: 400px;
         height: 300px;
     }
 
-    .img_ecology{
+    .ecology img{
         width: 400px;
         height: 300px;
     }
 
-    .img_factory{
+    .factory img{ 
         width: 400px;
         height: 300px;
     }
 
-    .img-reserve{
+    .reserve img{
         width: 400px;
         height: 300px; 
     }
@@ -1242,19 +1348,21 @@ body{
     .main-img1{
         display: block;
         width: 500px;
+        border-radius: 120px;
     }
 
     .main-img2{
         display: none;
+    }
+
+    .creators-window {
+        width: 70%;
     }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
     .main-img2{
         width: 500px;
-    }
-
-    .mobile-open{
-        display: none;
+        border-radius: 120px;
     }
 }
