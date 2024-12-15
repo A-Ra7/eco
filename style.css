@@ -398,7 +398,7 @@ body{
 }
 
 #about{
-    padding-top: 90px;
+    padding-top: 70px;
     display: flex;
     flex-direction: column;
     background: linear-gradient(rgba(255, 255, 255, 0.2) 10%,rgba(0, 160, 0, 0.2) 70% 84%,rgba(255, 255, 255, 0.2) 100%);
@@ -424,7 +424,7 @@ body{
 }
 
 .description-text{
-    margin: 0 70px 25px 70px;
+    margin: 0 30px 0;
 }
 
 .img-container{
@@ -459,7 +459,7 @@ body{
 }
 
 .companies-text {
-    margin: 70px 25px;
+    margin: 70px 0;
 }
 
 #ecological-restoration{
@@ -489,7 +489,7 @@ body{
 
 
 .factories-text{
-    margin: 40px;
+    margin: 40px 0;
 }
 
 .factories img{
@@ -515,7 +515,7 @@ body{
 
 
 .cars-text{
-    margin: 40px;
+    margin: 40px 0;
 }
 
 .cars img{
@@ -606,7 +606,7 @@ body{
 }
 
 .reclamination-text {
-    margin: 40px;
+    margin: 40px 0;
 }
 
 .fauna{
@@ -630,7 +630,7 @@ body{
 }
 
 .fauna-text {
-    margin: 40px;
+    margin: 40px 0;
 }
 
 .fauna-problems{
@@ -869,17 +869,22 @@ body{
 
     .description-header {
         font-size: 30px;
-        margin-bottom: 0;
+        margin: 30px 25px 0;
     }
 
     .description-text {
-       margin-left: 0;
-       margin-right: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .companies-header {
+        font-size: 30px;
+        margin: 50px 25px 0;
     }
 
     .companies-text {
-        margin-left: 0;
-        margin-right: 0;
+        margin-top: 50px;
+        margin-bottom: 0;
     }
 
     #ecological-restoration {
@@ -898,15 +903,12 @@ body{
 
     .factories-header{
         font-size: 30px;
+        margin: 30px 25px 0;
+
     }
 
     .factories img{
         width: 300px;
-    }
-
-    .factories-text{
-        margin-left: 0;
-        margin-right: 0;
     }
 
     .cars {
@@ -915,10 +917,8 @@ body{
 
     .cars-header{
         font-size: 30px;
-    }
-    
-    .cars-text{
-        width: 100%;
+        margin-left: 25px;
+        margin-right: 25px;
     }
     
     .cars img{
@@ -932,6 +932,8 @@ body{
 
     .ecology-header {
         font-size: 30px;
+        margin-left: 25px;
+        margin-right: 25px;
     }
 
     .ecology-text{
@@ -970,11 +972,8 @@ body{
 
     .reclamination-header {
         font-size: 30px;
-    }
-
-    .reclamination-text {
-        margin-left: 0;
-        margin-right: 0;
+        margin-left: 25px;
+        margin-right: 25px;
     }
 
     .reclamination img {
@@ -983,18 +982,16 @@ body{
 
     .fauna-header {
         font-size: 30px;
+        margin-left: 25px;
+        margin-right: 25px;
     }
 
     .fauna img{
         width: 300px;
     }
 
-    .fauna-text{
-        margin-left: 0;
-        margin-right: 0;
-    }
-
     .fauna-problems{
+        margin-top: 0;
         flex-direction: column-reverse;
         align-items: center;
     }
@@ -1005,6 +1002,8 @@ body{
 
     .fauna-problems-header{
         font-size: 30px;
+        margin-left: 25px;
+        margin-right: 25px;
     }
 
     .fauna-problems img{
@@ -1012,6 +1011,7 @@ body{
     }
 
     .fauna-solution{
+        margin-top: 0;
         flex-direction: column;
         align-items: center;
     }
@@ -1027,6 +1027,8 @@ body{
 
     .fauna-solution-header {
         font-size: 30px;
+        margin-left: 25px;
+        margin-right: 25px;
     }
 
     .creators-window {
@@ -1116,11 +1118,6 @@ body{
 
     .cars {
         padding-bottom: 25px;
-    }
-
-    .cars-text{
-        margin-left: 0;
-        margin-right: 0;
     }
     
     .cars img {
