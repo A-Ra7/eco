@@ -283,7 +283,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: linear-gradient(to top, rgba(5, 160, 0, 0.7),rgba(0, 171, 9, 0.7));
+    background: linear-gradient(to top, rgba(5, 160, 0, 0.9),rgba(0, 171, 9, 0.9));
     box-shadow: 0 7px 12px 0 rgba(2, 120, 0, 0.7);
     border-radius: 12px;
     color: white;
