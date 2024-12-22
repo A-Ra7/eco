@@ -124,7 +124,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: linear-gradient(to top, rgba(36, 145, 43, 0.93),rgba(25, 144, 80, 0.93));
+    background: linear-gradient(to top, rgb(36, 145, 43),rgb(25, 144, 80));
     box-shadow: 0 3px 7px 2px rgba(0,255,119,0.3);
     border-radius: 3000px;
 }
@@ -132,8 +132,8 @@ body{
 .mobile-close {
     position: absolute;
     z-index: 11;
-    top: 7px;
-    right: 7px;
+    top: 12px;
+    right: 12px;
 }
 
 .mobile-close img {
@@ -231,13 +231,13 @@ body{
     color: white;
     border-radius: 30px;
     padding: 10px 30px;
-    background: linear-gradient(to right,  #2fe556 , #fc3e57);
+    background: linear-gradient(to right,  #32e156 , #fc3e57);
     box-shadow: 0px 5px 25px 4px rgba(0, 138, 39, 0.3);
     transition: all ease 0.3s;
 }
 
 .contact-button:hover {
-    box-shadow: 0px 5px 25px 4px rgba(0, 255, 72, 0.3);
+    box-shadow: 0px 5px 25px 4px rgba(0, 198, 56, 0.3);
     transform: scale(1.1);
 }
 
@@ -283,7 +283,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: linear-gradient(to top, rgba(5, 160, 0, 0.9),rgba(0, 171, 9, 0.9));
+    background: linear-gradient(to top, rgba(5, 160, 0, 0.7),rgba(0, 171, 9, 0.7));
     box-shadow: 0 7px 12px 0 rgba(2, 120, 0, 0.7);
     border-radius: 12px;
     color: white;
@@ -298,8 +298,8 @@ body{
 .contact-close {
     position: absolute;
     z-index: 21;
-    top: 7px;
-    right: 7px;
+    top: 12px;
+    right: 12px;
 }
 
 .contact-close img {
@@ -459,7 +459,7 @@ body{
 }
 
 .companies-text {
-    margin: 70px 0;
+    margin: 0 30px 30px;
 }
 
 #ecological-restoration{
@@ -489,7 +489,7 @@ body{
 
 
 .factories-text{
-    margin: 40px 0;
+
 }
 
 .factories img{
@@ -500,6 +500,7 @@ body{
 }
 
 .cars{
+    margin-top: 70px;
     width: 100%;
     display: flex;
     padding-bottom: 50px;
@@ -515,7 +516,7 @@ body{
 
 
 .cars-text{
-    margin: 40px 0;
+
 }
 
 .cars img{
@@ -526,6 +527,7 @@ body{
 }
 
 .ecology{
+    margin-top: 70px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -586,7 +588,7 @@ body{
 }
 
 .reclamination{
-    margin-top: 30px;
+    margin-top: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -606,11 +608,10 @@ body{
 }
 
 .reclamination-text {
-    margin: 40px 0;
 }
 
 .fauna{
-    margin-top: 30px;
+    margin-top: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -630,29 +631,28 @@ body{
 }
 
 .fauna-text {
-    margin: 40px 0;
 }
 
-.fauna-problems{
-    margin-top: 30px;
+.fauna-tasks{
+    margin-top: 70px;
     width: 100%;
     display: flex;
     align-items: center;
 }
 
-.fauna-problems-text{
+.fauna-tasks-text{
     width: 50%;
-    margin: 40px;
+    margin:40px;
 }   
 
-.fauna-problems img{
+.fauna-tasks img{
     width: 600px;
     border-radius:30px;
-    margin: 0 50px 50px 50px;
+    margin: 40px;
     box-shadow: 0 7px 25px 0 #5959597e;
 }
 
-.fauna-problems-header{
+.fauna-tasks-header{
     font-size: 40px;
     color: rgb(5, 160, 0);
     text-align: center;
@@ -662,7 +662,7 @@ body{
     width: 100%;
     display: flex;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 70px;
 }
 
 .fauna-solution-header{
@@ -813,7 +813,8 @@ body{
     }
     
     .main-header {
-        margin-top: 70px;
+        margin-top: 50px;
+        margin-bottom: 40px;
     }
 
     .main-text {
@@ -862,14 +863,14 @@ body{
     }
 
     .text {
-        margin-top: 30px;
+        margin-top: 0;
         font-size: 20px;
         text-align: center;
     }
 
     .description-header {
         font-size: 30px;
-        margin: 30px 25px 0;
+        margin: 30px 25px;
     }
 
     .description-text {
@@ -903,7 +904,7 @@ body{
 
     .factories-header{
         font-size: 30px;
-        margin: 30px 25px 0;
+        margin: 30px 25px;
 
     }
 
@@ -990,23 +991,23 @@ body{
         width: 300px;
     }
 
-    .fauna-problems{
+    .fauna-tasks{
         margin-top: 0;
         flex-direction: column-reverse;
         align-items: center;
     }
     
-    .fauna-problems-text{
+    .fauna-tasks-text{
         width: 100%;
     }
 
-    .fauna-problems-header{
+    .fauna-tasks-header{
         font-size: 30px;
         margin-left: 25px;
         margin-right: 25px;
     }
 
-    .fauna-problems img{
+    .fauna-tasks img{
         width: 300px;
     }
 
@@ -1060,6 +1061,7 @@ body{
 
     .main-header {
         margin-top: 120px;
+        margin-bottom: 70px;
     }
 
     .main-text {
@@ -1069,7 +1071,7 @@ body{
     }
 
     .text {
-        margin-top: 52px;
+        margin-top: 25px;
         font-size: 20px;
         flex-direction: column;
     }
@@ -1125,10 +1127,12 @@ body{
     }
 
     .volunteering img {
+        margin-top: 0;
         width: 450px;
     }
 
     .ecology img{
+        margin-top: 0;
         width: 450px;
     }
 
@@ -1136,6 +1140,7 @@ body{
         width: 450px;
     }
     .reserve img{
+        margin-top: 0;
         width: 450px;
     }
 
@@ -1174,7 +1179,7 @@ body{
     .fauna img{
         width: 450px;
     }
-    .fauna-problems img{
+    .fauna-tasks img{
         width: 450px;
         margin: 0 0 80px 0;
     }
@@ -1193,16 +1198,17 @@ body{
         margin-right: 0;
     }
 
-    .fauna-problems{
+    .fauna-tasks{
         flex-direction: column-reverse;
         align-items: center;
     }
 
-    .fauna-problems-text{
+    .fauna-tasks-text{
         width: 100%;
     }
     
     .fauna-solution{
+        margin-top: 0;
         flex-direction: column;
         align-items: center;
     }
@@ -1236,6 +1242,7 @@ body{
 
     .main-header {
         margin-top: 120px;
+        margin-bottom: 70px;
     }
 
     .main-text {
@@ -1243,7 +1250,7 @@ body{
     }
 
     .text {
-        margin-top: 52px;
+        margin-top: 25px;
     }
 
     .main-img1{
@@ -1296,11 +1303,19 @@ body{
         width: 100%;
     }
 
-    .img-reclamation{
-        width: 600px;
+    .volunteering img {
+        margin-top: 0;
     }
 
-    .fauna-problems{
+    .ecology img{
+        margin-top: 0;
+    }
+
+    .reserve img{
+        margin-top: 0;
+    }
+
+    .fauna-tasks{
         flex-direction: column-reverse;
         align-items: center;
     }
@@ -1310,7 +1325,7 @@ body{
         align-items: center;
     }
     
-    .fauna-problems-text{
+    .fauna-tasks-text{
         width: 100%;
     }
     .fauna-solution-text{
@@ -1334,7 +1349,8 @@ body{
     }
 
     .main-header {
-        margin-top: 120px;
+        margin-top: 70px;
+        margin-bottom: 70px;
     }
 
     .main-text {
@@ -1387,7 +1403,7 @@ body{
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
     .main-img2{
-        width: 500px;
+        width: 550px;
         border-radius: 120px;
     }
 }
