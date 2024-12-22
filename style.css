@@ -383,8 +383,8 @@ body{
     padding: 10px 20px;
     font-size: 18px;
     font-weight: 500;
-    background-color: #32e156;
-    box-shadow: 0px 5px 25px 4px rgba(0, 138, 39, 0.3);
+    background-color: #f44457;
+    box-shadow: 0px 5px 25px 4px #f444565d;
     color: rgb(255, 255, 255);
     border: none;
     border-radius: 25px;
@@ -393,8 +393,8 @@ body{
 }
 
 .game-button:hover {
-    background: #f44457;
-    box-shadow: 0px 5px 25px 4px #f444565d;
+    background-color: #32e156;
+    box-shadow: 0px 5px 25px 4px rgba(0, 138, 39, 0.3);
 }
 
 #about{
